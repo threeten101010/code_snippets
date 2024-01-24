@@ -10,8 +10,8 @@ $env:TMP = "C:\temp\SqlPackageTemp" #Set temporary location of temp folder.
 $SourceServerName = "."
 $SourceDatabaseName = "Database"
 $BacpacPath = "C:\temp\"
-$SourceTimeOut = 3600   # Int Seconds
+$SourceTimeOut = 0   # Int Seconds
  
-SqlPackage.exe /a:Export /ssn:$SourceServerName /sdn:$SourceDatabaseName /stsc:True /st:$SourceTimeOut /tf:$BacpacPath$SourceDatabaseName".bacpac" /df:$BacpacPath$SourceDatabaseName".log"
+SqlPackage.exe /a:Export /ssn:$SourceServerName /sdn:$SourceDatabaseName /stsc:True /st:$SourceTimeOut /p:CommandTimeout=0 /p:LongRunningCommandTimeout=0 /tf:$BacpacPath$SourceDatabaseName".bacpac" /df:$BacpacPath$SourceDatabaseName".log"
  
 $env:TMP = $OldTemp
