@@ -2,6 +2,7 @@
 # Reference: https://learn.microsoft.com/en-us/sql/tools/sqlpackage/sqlpackage?view=sql-server-ver16
 # Reference: https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/tools/sqlpackage/sqlpackage-script.md
 # Reference: https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/tools/sqlpackage/sqlpackage.md
+# Reference: https://www.sqlsmarts.com/azure-devops-sqlpackage-deployment-timeouts/
 
 $PathVariables=$env:Path
 $OldTemp = $env:TMP
