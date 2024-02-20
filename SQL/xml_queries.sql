@@ -1,0 +1,2 @@
+SELECT CAST(MY_XML AS xml)
+  FROM OPENROWSET(BULK 'C:\filename.xml', SINGLE_BLOB) as T(MY_XML)
